@@ -1,2 +1,6 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1>Hello,</h1>
+<p><%= @user.email %></p>
+
+<br>
+
+<%= link_to('logout', destroy_user_session_path, :method => :delete) %> 
