@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
     
+  get 'users/show'
 
   devise_for :users, controllers: { sessions: "users/sessions" }
-  root 'welcome#index'
 
-  
+
+  resources :users do
+    resources :products
+  end
+
+
+  root 'welcome#index'
 end
 
 
