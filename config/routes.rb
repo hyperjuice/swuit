@@ -1,6 +1,6 @@
-Rails.application.routes.draw do
-    
-  get 'map/index'
+Rails.application.routes.draw do 
+
+  get '/map' => 'map#index'
 
   get 'users/show'
 
