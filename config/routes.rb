@@ -1,8 +1,20 @@
 Rails.application.routes.draw do 
 
-  get '/map' => 'map#index'
+  get 'products/index'
 
-  get 'users/show'
+  get 'products/new'
+
+  get 'products/create'
+
+  get 'products/edit'
+
+  get 'products/update'
+
+  get 'products/show'
+
+  get 'products/destroy'
+
+  get '/map' => 'map#index'
 
   devise_for :users, controllers: { sessions: "users/sessions" }
 
