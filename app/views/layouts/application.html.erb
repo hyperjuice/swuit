@@ -15,6 +15,8 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
+<script src="pickers.js"></script>
+
 <!-- START MAPBOX -->
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
@@ -29,19 +31,24 @@
 </head>
 <body>
 
+  <div class="container">
 
-	<p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  	<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
-<% if user_signed_in? %>
-	<%= link_to('logout', destroy_user_session_path, :method => :delete) %>        
-<% else %>
-  <%= link_to('login', new_user_session_path)  %>
-		<br>
-  <%= link_to('sign up', new_user_registration_path) %>
-<% end %>
+    <% if user_signed_in? %>
+    	<%= link_to('logout', destroy_user_session_path, :method => :delete) %>  <br>
 
-<%= yield %>
+      
+    <% else %>
+      <%= link_to('login', new_user_session_path)  %>
+    		<br>
+      <%= link_to('sign up', new_user_registration_path) %>
+    <% end %>
+
+    <%= yield %>
+
+  </div>
 
 </body>
 </html>
