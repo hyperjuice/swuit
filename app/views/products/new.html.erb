@@ -5,13 +5,13 @@
 	<%= simple_form_for [@user, @product] do |f| %>
 		
 		<div class="field">
-			<%= f.input :kind %>
-			<%= f.input :description %>
-			<%= f.input :address %>
+			<%= f.input :kind, :input_html => {:style=> 'width: 400px'} %>
+			<%= f.input :description, :input_html => {:style=> 'width: 400px'} %>
+			<%= f.input :address, :input_html => {:style=> 'width: 400px'} %>
 			<%= f.input :latitude, :as => :hidden, :input_html => { :value => "some value" } %>
 			<%= f.input :longitude, :as => :hidden, :input_html => { :value => "some value" } %>
-			<%= f.input :price %>
-			<%= f.input :availability, :as => :datetime_picker %>
+			<%= f.input :price, :input_html => {:style=> 'width: 400px'} %>
+			<%= f.input :availability, :input_html => {:style=> 'width: 100px'} %>
 			<%= f.button :submit %>
 		</div>
 		
