@@ -4,16 +4,15 @@
 
 	<%= simple_form_for [@user, @product] do |f| %>
 		
-
 		<div class="field">
-			<%= f.input :kind %><br />
-			<%= f.input :description %><br />
-			<%= f.input :address %><br />
-			<%= f.input :latitude, :as => :hidden, :input_html => { :value => "some value" } %><br />
-			<%= f.input :longitude, :as => :hidden, :input_html => { :value => "some value" } %><br />
-			<%= f.input :price %><br />
-			<%= f.input :availability, :as => :datetime_picker %><br />
-			<%= f.button :submit %><br />
+			<%= f.input :kind %>
+			<%= f.input :description %>
+			<%= f.input :address %>
+			<%= f.input :latitude, :as => :hidden, :input_html => { :value => "some value" } %>
+			<%= f.input :longitude, :as => :hidden, :input_html => { :value => "some value" } %>
+			<%= f.input :price %>
+			<%= f.input :availability, :as => :datetime_picker %>
+			<%= f.button :submit %>
 		</div>
 		
 	<% end %>
