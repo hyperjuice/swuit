@@ -27,6 +27,10 @@ gem 'devise'
 
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
 
+gem 'momentjs-rails', '~> 2.9',  :github => 'derekprior/momentjs-rails'
+
+gem 'simple_form', '~> 3.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
