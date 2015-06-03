@@ -1,2 +1,53 @@
-<h1>Products#new</h1>
-<p>Find me in app/views/products/new.html.erb</p>
+<h1>Make a new product</h1>
+
+<%= form_for [@user, @product] do |f| %> 
+
+	<div class="field">
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </div>
+
+  <br />
+
+	<div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+
+  <br />
+
+	<div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+
+  <br />
+
+	<div class="field">
+    <%= f.hidden_field :latitude %>
+  </div>
+
+	<div class="field">
+    <%= f.hidden_field :longitude %>
+  </div>
+
+	<div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+
+  <br />
+
+  <div class="field">
+    <%= f.label :availability %><br />
+    <%= f.text_field :availability %>
+  </div>
+
+	<br />
+
+	<div class="actions">
+    <%= f.submit "submit" %>
+  </div>
+
+
+<% end  %>
