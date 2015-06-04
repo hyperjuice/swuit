@@ -1,9 +1,11 @@
-<div class="container">
+<div class="homefont">
 	<h1>Products</h1>
+</div>
+	
 	<p>These are all of the products belonging to <%= @user.first_name %>:</p>
 
 	<% @user.products.each do |product|  %> 
 	<li>Kind: <%= product.kind  %> <%= link_to("Show Product", [@user, product]) %></li>
 	<% end %> 
 	</ul>
-</div>
+
