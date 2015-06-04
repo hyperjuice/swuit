@@ -1,12 +1,9 @@
-<p>
-	<%= link_to "Back to dashboard", user_path(@user) %> 
-</p>
+<div class="container">
+	<h1>Products</h1>
+	<p>These are all of the products belonging to <%= @user.first_name %>:</p>
 
-<h1>Products</h1>
-<p>These are all of the products belonging to <%= @user.first_name %>:</p>
-
-<% @user.products.each do |product|  %> 
-<li>Kind: <%= product.kind  %> <%= link_to("Show Product", [@user, product]) %></li>
-<% end %> 
-</ul>
-
+	<% @user.products.each do |product|  %> 
+	<li>Kind: <%= product.kind  %> <%= link_to("Show Product", [@user, product]) %></li>
+	<% end %> 
+	</ul>
+</div>

@@ -33,9 +33,12 @@
 
   	<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
+    
+    <%= link_to('home', root_path)  %> <br>
     <% if user_signed_in? %>
     	<%= link_to('logout', destroy_user_session_path, :method => :delete) %>  <br>
+      <%= link_to('Dashboard', user_path(current_user)) %> 
+
 
       
     <% else %>
