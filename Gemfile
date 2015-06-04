@@ -31,6 +31,8 @@ gem 'momentjs-rails', '~> 2.9',  :github => 'derekprior/momentjs-rails'
 
 gem 'simple_form', '~> 3.1'
 
+gem 'geocoder'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
