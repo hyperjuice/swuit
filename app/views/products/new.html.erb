@@ -1,0 +1,20 @@
+<div class="container">
+
+	<h1>Make a new product</h1>
+
+	<%= simple_form_for [@user, @product] do |f| %>
+		
+		<div class="field">
+			<%= f.input :kind, :input_html => {:style=> 'width: 400px'} %>
+			<%= f.input :description, :input_html => {:style=> 'width: 400px'} %>
+			<%= f.input :address, :input_html => {:style=> 'width: 400px'} %>
+			<%= f.input :latitude, :as => :hidden, :input_html => { :value => "some value" } %>
+			<%= f.input :longitude, :as => :hidden, :input_html => { :value => "some value" } %>
+			<%= f.input :price, :input_html => {:style=> 'width: 400px'} %>
+			<%= f.input :availability, :input_html => {:style=> 'width: 100px'} %>
+			<%= f.button :submit %>
+		</div>
+		
+	<% end %>
+
+</div>	

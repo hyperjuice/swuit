@@ -5,10 +5,51 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<!-- START MAPBOX -->
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:60%; }
+</style>
+
+<!-- END MAPBOX -->
+
 </head>
 <body>
 
-<%= yield %>
+  <div class="container">
+
+  	<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    
+    <%= link_to('home', root_path)  %> <br>
+    <% if user_signed_in? %>
+    	<%= link_to('logout', destroy_user_session_path, :method => :delete) %>  <br>
+      <%= link_to('Dashboard', user_path(current_user)) %> 
+
+
+      
+    <% else %>
+      <%= link_to('login', new_user_session_path)  %>
+    		<br>
+      <%= link_to('sign up', new_user_registration_path) %>
+    <% end %>
+
+    <%= yield %>
+
+  </div>
 
 </body>
 </html>
