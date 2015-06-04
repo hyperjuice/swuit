@@ -6,6 +6,9 @@
 	<h3>Kind: <%= @product.kind %> </h3>
 	<h3>Description: <%= @product.description %> </h3>
 	<h3>Address: <%= @product.address %> </h3>
+
+	<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=15&markers=#{@product.latitude}%2C#{@product.longitude}" %>
+
 	<h3>Price: <%= @product.price %> </h3>
 	<h3>Availability: <%= @product.availability.strftime("%B %e, %Y at %l:%M%p") %> </h3>
 
@@ -14,3 +17,5 @@
 	</p>
 	
 </div>	
+
+
