@@ -1,2 +1,12 @@
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+<p>
+	<%= link_to "Back to dashboard", user_path(@user) %> 
+</p>
+
+<h1>Products</h1>
+<p>These are all of the products belonging to <%= @user.first_name %>:</p>
+
+<% @user.products.each do |product|  %> 
+<li>Kind: <%= product.kind  %> <%= link_to("Show Product", [@user, product]) %></li>
+<% end %> 
+</ul>
+
