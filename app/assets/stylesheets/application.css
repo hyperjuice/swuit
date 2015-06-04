@@ -15,3 +15,11 @@
  *= require_self
 
  */
+
+ .notice {
+ 	text-align: center;
+ }
+
+.alert {
+ 	text-align: center;
+ } 
