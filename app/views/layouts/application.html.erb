@@ -24,8 +24,10 @@
     #map { position:absolute; top:0; bottom:0; width:60%; }
   </style>
   <!-- END MAPBOX -->
+
 </head>
-<body>
+<body class="color">
+
   <!-- start top navbar -->
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
@@ -46,10 +48,12 @@
   <!-- end top navbar -->
 
   <div class="container">
-  	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <br><br><br>
     <%= yield %>
   </div>
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
 </body>
 </html>

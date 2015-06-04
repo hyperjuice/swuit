@@ -16,10 +16,18 @@
 
  */
 
- .notice {
+.navbar {
+ 	background-color: #D3F4FF;
+}
+
+.notice {
  	text-align: center;
- }
+}
 
 .alert {
  	text-align: center;
- } 
+} 
+
+.color {
+	background-color: #E0C2FF;
+}

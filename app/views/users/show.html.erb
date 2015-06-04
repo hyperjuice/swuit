@@ -1,22 +1,17 @@
-<div class="container">
+<h1>Hello,</h1>
+<h3><%= @user.first_name %></h3>
 
-	<h1>Hello,</h1>
-	<h3><%= @user.first_name %></h3>
+<br>
+<%= link_to "Add Product", new_user_product_path(@user)  %>
 
-	<br>
-	<%= link_to "Add Product", new_user_product_path(@user)  %>
+<br><br>
 
+See all your products: <%= link_to "Your products", user_products_path(@user)  %>
 
-	<br><br>
+<br><br>
 
-	See all your products: <%= link_to "Your products", user_products_path(@user)  %>
+Check out the Swuit map:
 
-	<br><br>
+<br>
 
-	Check out the Swuit map:
-
-	<br>
-
-	<%= link_to('click here', map_path)  %>
-
-</div>
+<%= link_to('click here', map_path)  %>
