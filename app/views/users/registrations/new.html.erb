@@ -1,13 +1,11 @@
 <div class="homefont">
-
   <h2>Sign up</h2>
-
 </div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-<div class="field">
+  <div class="field">
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name %>
   </div>
@@ -15,15 +13,15 @@
   <br />
   
   <div class="field">
-      <%= f.label :last_name %><br />
-      <%= f.text_field :last_name %>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
   </div>
 
   <br />
 
   <div class="field">
-      <%= f.label :phone %><br />
-      <%= f.text_field :phone, placeholder: '773-555-5555' %>
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone, placeholder: '773-555-5555' %>
   </div>  
 
   <br />
