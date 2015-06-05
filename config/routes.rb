@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get '/map' => 'map#index'
+  get '/mapdata' => 'map#map'
 
   devise_for :users, controllers: { sessions: "users/sessions" }
 
