@@ -36,6 +36,7 @@
           <%= link_to('home', root_path, class: "btn btn-success")  %>
             <% if user_signed_in? %>
               <%= link_to('Dashboard', user_path(current_user), class: "btn btn-info") %>
+              <%= link_to('Map', map_path, class: "btn btn-info") %>
               <%= link_to('logout', destroy_user_session_path, :method => :delete, class: "btn btn-danger") %>  
             <% else %>
               <%= link_to('login', new_user_session_path, class: "btn btn-success")  %>
