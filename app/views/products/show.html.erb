@@ -1,17 +1,21 @@
 
-<div class="container">
-	
+<div class="homefont">
 	<h1>Product details</h1>
-
-	<h3>Kind: <%= @product.kind %> </h3>
-	<h3>Description: <%= @product.description %> </h3>
-	<h3>Address: <%= @product.address %> </h3>
-
-	<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=15&markers=#{@product.latitude}%2C#{@product.longitude}" %>
-
-	<h3>Price: <%= @product.price %> </h3>
-	<h3>Availability: <%= @product.availability.strftime("%B %e, %Y at %l:%M%p") %> </h3>
-	
+</div>
+<div class="row">
+	<div class ="context">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3>Kind: <%= @product.kind %>:</h3>
+			</div>	
+			<div class="panel-body">
+				<h3>Description: <%= @product.description %> </h3>
+				<h3>Address: <%= @product.address %> </h3>
+				<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=15&markers=#{@product.latitude}%2C#{@product.longitude}" %>
+				<h3>Price: <%= @product.price %> </h3>
+				<h3>Availability: <%= @product.availability.strftime("%B %e, %Y at %l:%M%p") %> </h3>
+				<h3>Contact me: <%= @user.email %> or <%= @user.phone %></h3>
+			</div>
+		</div>	
+	</div>
 </div>	
-
-

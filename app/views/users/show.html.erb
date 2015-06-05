@@ -1,32 +1,16 @@
 <div class="homefont">
-
 	<h1>Hello,</h1>
-
 </div>
-
 <div class="row">
 	<div class ="context">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3><%= @user.first_name %></h3>
 			</div>	
-				<div class="panel-body">
-					<%= link_to "Add Product", new_user_product_path(@user)  %>
-
-					<br><br>
-
-					See all your products: <%= link_to "Your products", user_products_path(@user)  %>
-
-					<br><br>
-
-					Check out the Swuit map:
-
-					<br>
-
-					<%= link_to('click here', map_path)  %>
-
-				</div>
-
+			<div class="panel-body">
+				<%= link_to("Add Product", new_user_product_path(@user), class: "btn btn-success") %>
+				<%= link_to("Your products", user_products_path(@user), class: "btn btn-info") %>
+			</div>
 		</div>	
 	</div>
 </div>		

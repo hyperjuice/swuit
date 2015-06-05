@@ -1,11 +1,18 @@
 <div class="homefont">
 	<h1>Products</h1>
 </div>
-	
-	<p>These are all of the products belonging to <%= @user.first_name %>:</p>
-
-	<% @user.products.each do |product|  %> 
-	<li>Kind: <%= product.kind  %> <%= link_to("Show Product", [@user, product]) %></li>
-	<% end %> 
-	</ul>
-
+<div class="row">
+	<div class ="context">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3>These are all of the products belonging to <%= @user.first_name %>:</h3>
+			</div>	
+			<div class="panel-body">
+				<% @user.products.each do |product|  %> 
+					<%= link_to("Show Product", [@user, product], class: "btn btn-success") %> <%= product.kind %>
+					<p>&nbsp;</p>
+				<% end %>
+			</div>
+		</div>	
+	</div>
+</div>		
