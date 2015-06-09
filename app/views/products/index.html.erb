@@ -9,7 +9,9 @@
 			</div>	
 			<div class="panel-body">
 				<% @user.products.each do |product|  %> 
-					<%= link_to("Show Product", [@user, product], class: "btn btn-success") %> <%= product.kind %>
+					<%= link_to("Show", [@user, product], class: "btn btn-success") %>
+					<%= link_to("Edit", edit_user_product_path(@user, product), class: "btn btn-success") %>
+					<%= product.kind %>
 					<p>&nbsp;</p>
 				<% end %>
 			</div>
