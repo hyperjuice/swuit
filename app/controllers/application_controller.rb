@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+	include Pundit
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
