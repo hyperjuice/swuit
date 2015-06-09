@@ -9,9 +9,9 @@
 			</div>	
 			<div class="panel-body">
 				<% @user.products.each do |product|  %> 
-					<%= link_to("Show", [@user, product], class: "btn btn-success") %>
-					<%= link_to("Edit", edit_user_product_path(@user, product), class: "btn btn-success") %>
-					<%= link_to("Delete", [@user, product], class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure you want to delete this?" }) %> 
+					<%= link_to("Show", [@user, product], class: "btn btn-success") if policy(product).show? %>
+					<%= link_to("Edit", edit_user_product_path(@user, product), class: "btn btn-success") if policy(product).edit? %>
+					<%= link_to("Delete", [@user, product], class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure you want to delete this?" }) if policy(product).destroy? %> 
 					<%= product.kind %>
 					<p>&nbsp;</p>
 				<% end %>

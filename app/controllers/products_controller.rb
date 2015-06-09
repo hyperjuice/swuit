@@ -18,6 +18,7 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    authorize @product
   end
 
   def update
@@ -27,14 +28,16 @@ class ProductsController < ApplicationController
   end
 
   def show
+    authorize @product
   end
 
   def destroy
+    authorize @product
     @product.destroy
     redirect_to user_products_path, Notice: "The product was successfully destroyed."
   end
 
-  private
+private
   def set_user
     @user = User.find(params[:user_id])
   end
