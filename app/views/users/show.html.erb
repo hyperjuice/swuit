@@ -8,8 +8,8 @@
 				<h3><%= @user.first_name %></h3>
 			</div>	
 			<div class="panel-body">
-				<%= link_to("Add Product", new_user_product_path(@user), class: "btn btn-success") %>
-				<%= link_to("Your products", user_products_path(@user), class: "btn btn-info") %>
+				<%= link_to("add product", new_user_product_path(current_user), class: "btn btn-success") %>
+				<%= link_to("your products", user_products_path(current_user), class: "btn btn-info") %>
 			</div>
 		</div>	
 	</div>
