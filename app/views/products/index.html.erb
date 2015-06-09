@@ -1,0 +1,21 @@
+<div class="homefont">
+	<h1>Products</h1>
+</div>
+<div class="row">
+	<div class ="context">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3>These are all of the products belonging to <%= @user.first_name %>:</h3>
+			</div>	
+			<div class="panel-body">
+				<% @user.products.each do |product|  %> 
+					<%= link_to("Show", [@user, product], class: "btn btn-success") %>
+					<%= link_to("Edit", edit_user_product_path(@user, product), class: "btn btn-success") %>
+					<%= link_to("Delete", [@user, product], class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure you want to delete this?" }) %> 
+					<%= product.kind %>
+					<p>&nbsp;</p>
+				<% end %>
+			</div>
+		</div>	
+	</div>
+</div>		
