@@ -6,6 +6,14 @@ class ProductPolicy < ApplicationPolicy
     @product = product
   end
 
+  def new?
+    product.user_id == user.id
+  end
+
+  def create?
+    new?
+  end
+
   def show?
     true
   end

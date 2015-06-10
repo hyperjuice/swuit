@@ -1,16 +1,19 @@
 class ProductsController < ApplicationController
   before_action :set_user
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_filter :new_product, only: [ :new, :create ]
 
   def index
     @products = Product.all
   end
 
   def new
+    authorize @product
     @product = Product.new
   end
 
   def create
+    authorize @product
     product_params = params.require(:product).permit(:kind, :description, :address, :latitude, :longitude, :price, :availability)
     product = Product.create(product_params)
     @user.products << product
@@ -44,5 +47,9 @@ private
 
   def set_product
     @product = Product.find(params[:id])
+  end
+
+  def new_product
+    @product = Product.new(user_id: params[:user_id])
   end
 end
