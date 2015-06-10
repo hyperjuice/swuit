@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
 
   def create
     authorize @product
-    product_params = params.require(:product).permit(:kind, :description, :address, :latitude, :longitude, :price, :availability)
+    product_params = params.require(:product).permit(:kind, :description, :file, :address, :latitude, :longitude, :price, :availability)
     product = Product.create(product_params)
     @user.products << product
     redirect_to [@user, product]
@@ -25,7 +25,7 @@ class ProductsController < ApplicationController
   end
 
   def update
-    product_params = params.require(:product).permit(:kind, :description, :address, :latitude, :longitude, :price, :availability)
+    product_params = params.require(:product).permit(:kind, :description, :file, :address, :latitude, :longitude, :price, :availability)
     @product.update(product_params)
     redirect_to [@user, @product]
   end
@@ -53,7 +53,7 @@ private
     @product = Product.new(user_id: params[:user_id])
   end
 
-  def user_params
-    params.require(:product).permit(:photo)
-  end
+  # def product_params
+  #   params.require(:product).permit(:photo)
+  # end
 end
