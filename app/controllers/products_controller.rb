@@ -52,4 +52,8 @@ private
   def new_product
     @product = Product.new(user_id: params[:user_id])
   end
+
+  def user_params
+    params.require(:product).permit(:photo)
+  end
 end

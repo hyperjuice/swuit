@@ -3,6 +3,7 @@
 	<div class="field">
 		<%= f.input :kind, :input_html => {:style=> 'width: 400px'} %>
 		<%= f.input :description, :input_html => {:style=> 'width: 400px'} %>
+		<%= f.input :photo, as: :file %>
 		<%= f.input :address, :input_html => {:style=> 'width: 400px'}, placeholder: 'EX: 1853 Solano Avenue, Berkeley, CA 94707' %>
 		<%= f.input :latitude, :as => :hidden, :input_html => { :value => "some value" } %>
 		<%= f.input :longitude, :as => :hidden, :input_html => { :value => "some value" } %>
@@ -12,4 +13,3 @@
 	</div>
 
 <% end %>
-
