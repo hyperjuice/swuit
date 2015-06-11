@@ -1,4 +1,6 @@
 class Product < ActiveRecord::Base
+	attr_accessible:  	
+
 	belongs_to :user
 
 	geocoded_by :address

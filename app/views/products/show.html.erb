@@ -11,6 +11,13 @@
 			<div class="panel-body">
 				<h3>Description: <%= @product.description %> </h3>
 				<h3>Address: <%= @product.address %> </h3>
+
+				
+				<%= image_tag @product.photo.url %>
+				<%= image_tag @product.photo.url(:medium) %>
+				<%= image_tag @product.photo.url(:thumb) %>
+
+
 				<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=15&markers=#{@product.latitude}%2C#{@product.longitude}" %>
 				<h3>Price: <%= @product.price %> </h3>
 				<h3>Availability: <%= @product.availability.strftime("%B %e, %Y at %l:%M%p") %> </h3>
