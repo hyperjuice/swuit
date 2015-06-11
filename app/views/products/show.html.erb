@@ -6,10 +6,10 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3>Kind: <%= @product.kind %></h3>
-				
 			</div>	
 			<div class="panel-body">
 				<h3>Description: <%= @product.description %> </h3>
+				<%= image_tag @product.photo.url(:medium) %> <br>
 				<h3>Address: <%= @product.address %> </h3>
 				<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=15&markers=#{@product.latitude}%2C#{@product.longitude}" %>
 				<h3>Price: <%= @product.price %> </h3>
