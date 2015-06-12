@@ -22,6 +22,7 @@ $.getJSON('/mapdata', function(data) {
         },
         properties: {
             title: ''+data[i].kind,
+            description: ''+data[i].description,
             'marker-size': 'large',
             'marker-color': '#000',
             'marker-symbol': 'park'
