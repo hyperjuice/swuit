@@ -1,6 +1,8 @@
 class MapController < ApplicationController
-  def index
-  end
+
+	def index
+	  @products = Product.all
+	end
 
   def map
   	@products = Product.all
