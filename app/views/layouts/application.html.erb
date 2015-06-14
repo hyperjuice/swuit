@@ -37,12 +37,12 @@
         <div class="nav navbar-right nav pull-left">
           <%= link_to('<i class="fa fa-home fa-lg"></i>'.html_safe, root_path, class: "btn btn-success")  %>
             <% if user_signed_in? %>
-              <%= link_to('dashboard', user_path(current_user), class: "btn btn-info") %>
-              <%= link_to('map', map_path, class: "btn btn-info") %>
-              <%= link_to('logout', destroy_user_session_path, :method => :delete, class: "btn btn-danger") %>  
+              <%= link_to('<i class="fa fa-cogs fa-lg"></i>'.html_safe, user_path(current_user), class: "btn btn-info") %>
+              <%= link_to('<i class="fa fa-map-marker fa-lg"></i>'.html_safe, map_path, class: "btn btn-info") %>
+              <%= link_to('<i class="fa fa-power-off fa-lg"></i>'.html_safe, destroy_user_session_path, :method => :delete, class: "btn btn-danger") %>  
             <% else %>
-              <%= link_to('login', new_user_session_path, class: "btn btn-success")  %>
-              <%= link_to('sign up', new_user_registration_path, class: "btn btn-warning") %>
+              <%= link_to('<i class="fa fa-user fa-lg"></i>'.html_safe, new_user_session_path, class: "btn btn-success")  %>
+              <%= link_to('<i class="fa fa-user-plus fa-lg"></i>'.html_safe, new_user_registration_path, class: "btn btn-warning") %>
           <% end %>
         </div>
       </div>
