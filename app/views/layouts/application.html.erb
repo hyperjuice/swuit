@@ -35,7 +35,7 @@
     <div class="navbar-inner">
       <div class="container">
         <div class="nav navbar-right nav pull-left">
-          <%= link_to('home', root_path, class: "btn btn-success")  %>
+          <%= link_to('<i class="fa fa-home fa-lg"></i>'.html_safe, root_path, class: "btn btn-success")  %>
             <% if user_signed_in? %>
               <%= link_to('dashboard', user_path(current_user), class: "btn btn-info") %>
               <%= link_to('map', map_path, class: "btn btn-info") %>
