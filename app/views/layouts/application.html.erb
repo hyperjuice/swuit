@@ -15,9 +15,12 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
   <!-- START MAPBOX -->
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
   <style>
     body { margin:0; padding:0; }
@@ -32,14 +35,14 @@
     <div class="navbar-inner">
       <div class="container">
         <div class="nav navbar-right nav pull-left">
-          <%= link_to('home', root_path, class: "btn btn-success")  %>
+          <%= link_to('<i class="fa fa-home fa-lg"></i>'.html_safe, root_path, class: "btn btn-success")  %>
             <% if user_signed_in? %>
-              <%= link_to('dashboard', user_path(current_user), class: "btn btn-info") %>
-              <%= link_to('map', map_path, class: "btn btn-info") %>
-              <%= link_to('logout', destroy_user_session_path, :method => :delete, class: "btn btn-danger") %>  
+              <%= link_to('<i class="fa fa-cogs fa-lg"></i>'.html_safe, user_path(current_user), class: "btn btn-info") %>
+              <%= link_to('<i class="fa fa-map-marker fa-lg"></i>'.html_safe, map_path, class: "btn btn-info") %>
+              <%= link_to('<i class="fa fa-power-off fa-lg"></i>'.html_safe, destroy_user_session_path, :method => :delete, class: "btn btn-danger") %>  
             <% else %>
-              <%= link_to('login', new_user_session_path, class: "btn btn-success")  %>
-              <%= link_to('sign up', new_user_registration_path, class: "btn btn-warning") %>
+              <%= link_to('<i class="fa fa-user fa-lg"></i>'.html_safe, new_user_session_path, class: "btn btn-success")  %>
+              <%= link_to('<i class="fa fa-user-plus fa-lg"></i>'.html_safe, new_user_registration_path, class: "btn btn-warning") %>
           <% end %>
         </div>
       </div>
