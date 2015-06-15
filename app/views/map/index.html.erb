@@ -7,9 +7,17 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-1">
-			<% @products.each do |product| %>
-			  <%= link_to product.kind, user_product_path(product.user, product), class: "btn btn-default" %> <br>
-			<% end %>
+			<table class="table table-hover">
+				<tbody>
+					<% @products.each do |product| %>
+						<tr>
+						  <td>
+						  	<%= link_to product.kind, user_product_path(product.user, product), class: "btn btn-default" %>
+						  </td>
+						</tr>  
+					<% end %>
+				</tbody>	
+			</table>	
 		</div>
 		<div class="col-md-11">
 			<div id='map'>
