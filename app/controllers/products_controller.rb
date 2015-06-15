@@ -25,9 +25,10 @@ class ProductsController < ApplicationController
   end
 
   def update
+    authorize @product
     product_params = params.require(:product).permit(:kind, :description, :photo, :address, :latitude, :longitude, :price, :availability)
     @product.update(product_params)
-    redirect_to [@user, @product]
+    redirect_to user_products_path
   end
 
   def show
