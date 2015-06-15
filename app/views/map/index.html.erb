@@ -2,13 +2,13 @@
 	<h1>Map Page</h1>
 </div>
 
-<div id='map'>
-</div>
-
-<h5>Thanks for the massive help on this page, <a href="https://github.com/AddisonT" target="_blank">Addison Tam</a></h5>
-
 <%= javascript_include_tag 'theMap', 'data-turbolinks-track' => true %>
 
-<% @products.each do |product| %>
-  <span class="label label-default"><%= product.kind %></span>
-<% end %>
+<div>
+	<% @products.each do |product| %>
+	  <%= link_to product.kind, user_product_path(product.user, product), class: "btn btn-default" %>
+	<% end %>
+</div>	
+
+<div id='map'>
+</div>

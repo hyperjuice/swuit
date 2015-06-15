@@ -7,7 +7,7 @@ $.getJSON('/mapdata', function(data) {
       .setView([37.865626, -122.280749], 12);
 
       var features = [];
-      for (i =0; i < data.length; i++) {
+      for (i = 0; i < data.length; i++) {
 
         features.push( {
 
@@ -31,5 +31,4 @@ $.getJSON('/mapdata', function(data) {
         }
         L.mapbox.featureLayer(features).addTo(map);
   });
-  
 });
