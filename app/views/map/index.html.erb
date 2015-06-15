@@ -1,14 +1,19 @@
 <div class="homefont">
-	<h1>Map Page</h1>
+	<h1>products by location</h1>
 </div>
 
 <%= javascript_include_tag 'theMap', 'data-turbolinks-track' => true %>
 
-<div>
-	<% @products.each do |product| %>
-	  <%= link_to product.kind, user_product_path(product.user, product), class: "btn btn-default" %>
-	<% end %>
-</div>	
-
-<div id='map'>
+<div class="container">
+	<div class="row">
+		<div class="col-md-1">
+			<% @products.each do |product| %>
+			  <%= link_to product.kind, user_product_path(product.user, product), class: "btn btn-default" %> <br>
+			<% end %>
+		</div>
+		<div class="col-md-11">
+			<div id='map'>
+			</div>
+		</div>	
+	</div>
 </div>
