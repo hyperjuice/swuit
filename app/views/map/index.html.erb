@@ -11,4 +11,5 @@
 
 <% @products.each do |product| %>
   <span class="label label-default"><%= product.kind %></span>
+	<%= link_to product.kind, user_product_path(product.user, product) %>
 <% end %>
